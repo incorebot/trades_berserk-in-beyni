@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Turtle Stance Bridge",
+  "version": "1.1.0",
+  "description": "Bridges Binance smart-money data to the local copy bot (localhost).",
+  "permissions": ["alarms", "webRequest", "storage", "tabs"],
+  "host_permissions": [
+    "https://www.binance.com/*",
+    "http://127.0.0.1:8777/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.binance.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["inject.js"], "matches": ["https://www.binance.com/*"] }
+  ]
+}

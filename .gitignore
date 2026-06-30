@@ -1,0 +1,25 @@
+# Gizli yapılandırma ve oturum (ASLA commit edilmez)
+config.py
+.follow_state.json
+.pw_state.json
+.pw_profile/
+.chrome-bot-binance/
+
+# Yerel editör/araç ayarları
+.claude/
+.vscode/
+.idea/
+
+# Loglar ve içsel çalışma günlüğü
+*.log
+bot.log
+log.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store
